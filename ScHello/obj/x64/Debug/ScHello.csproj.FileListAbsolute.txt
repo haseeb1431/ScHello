@@ -1,4 +1,0 @@
-D:\Projects\Test\SC\ScHello\ScHello\bin\Debug\ScHello.exe
-D:\Projects\Test\SC\ScHello\ScHello\bin\Debug\ScHello.pdb
-D:\Projects\Test\SC\ScHello\ScHello\obj\x64\Debug\ScHello.exe
-D:\Projects\Test\SC\ScHello\ScHello\obj\x64\Debug\ScHello.pdb

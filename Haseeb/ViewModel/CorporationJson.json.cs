@@ -10,7 +10,7 @@ namespace Haseeb.ViewModel
 
         static CorporationJson()
         {
-            
+            //DefaultTemplate.AllCorporation.
             //DefaultTemplate Franchises.ElementType.InstanceType = typeof(FranchiseDetailsJson);
         }
         

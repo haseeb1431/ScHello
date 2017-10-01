@@ -5,7 +5,17 @@
   "AllCorporation": [
     {
       "CorpName": "",
-      "Franchises": [ {} ]
+      "FranchisesCount": 0,
+      "AllFranchises": [
+        {
+          "FranchiseName": "",
+          "HouseSold": 0,
+          "AverageCommission": 0,
+          "TotalCommission": 0,
+          "SalesTrend": 0,
+          "EditURL": ""
+        }
+      ]
     }
   ],
   "FranchiseName$": "",

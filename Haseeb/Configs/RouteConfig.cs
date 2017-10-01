@@ -29,6 +29,18 @@ namespace Haseeb.Configs
                 });
 
             });
+
+            Handle.GET("/HaseebFranchise/franchise/{?}", (string ID) => {
+                return Db.Scope(() => {
+
+                    Session.Ensure();
+                    
+                    var franchise = DbHelper.FromID(DbHelper.Base64DecodeObjectID(ID)) as Franchise;
+
+                    return new FranchiseDetailsJson { Data = franchise };
+                    
+                });
+            });
         }
     }
 }

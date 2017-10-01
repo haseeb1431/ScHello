@@ -23,22 +23,43 @@
             <fieldset style="border:1px solid black">
                 <!--Styles should be in the separate CSS file-->
 
-                <h4>{{item.CorpName}}</h4>
-                <h5>Franchise Offices</h5>
+                <h3>{{item.CorpName}}</h3>
+                <h4>Franchise Offices</h4>
 
-                <h6>Sort on</h6>
+                <h5>Sort on</h5>
                 <button>Homes </button>
                 <button>Commission </button>
 
-                <!--custom HTML template element dom-repeat. It is similar to C# foreach loop.-->
-                <template is="dom-repeat" items="{{item.Franchises}}">
-                    <div>
-                        <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
-                        <template is="imported-template" model="{{item}}" content$="{{item.Html}}">
-                        </template>
-                    </div>
-                </template>
+                <!-- Franchise Details Table -->
+                <!--TODO: Figure out how we can move this out and keep it working as well-->
+                <!-- TODO: Apply table styling once funcationlity is complete -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number of homes sold</th>
+                            <th>Total Commission</th>
+                            <th>Average Commission</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    
+                    <template is="dom-repeat" items="{{item.AllFranchises}}">
+                        <tr>
+                            <td><a href="{{item.EditURL}}"> {{item.FranchiseName}}</a></td>
+                            <td>{{item.HouseSold}}</td>
+                            <td>{{item.AverageCommission}}</td>
+                            <td>{{item.TotalCommission}}</td>
+                            <td>{{item.SalesTrend}}</td>
+                        </tr>
+                        
 
+                        <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
+                        <!--<template is="imported-template" model="{{item}}" content$="{{item.Html}}">
+            </template>-->
+                    </template>
+
+                </table>
                 
                 <h5>Franchise Offices</h5>
                 <label>Franchise Name: </label>

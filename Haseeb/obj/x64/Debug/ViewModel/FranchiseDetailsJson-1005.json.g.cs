@@ -15,26 +15,21 @@ using Haseeb.Models;
 #pragma warning disable 1591
 
 namespace Haseeb.ViewModel {
-using __Franchis2__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input;
+using __Franchis1__ = global::Haseeb.ViewModel.FranchiseDetailsJson.JsonByExample;
 using _ScTemplate_ = Starcounter.Templates.Template;
 using st = Starcounter.Templates;
 using s = Starcounter;
-using __FrSalesTre__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.SalesTrend;
-using __FrTotalCom__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.TotalCommission;
-using __FrAverageC__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.AverageCommission;
-using __FrHouseSol__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.HouseSold;
 using __FrFranchis__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.FranchiseName;
 using __FrHtml__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input.Html;
+using __Franchis2__ = global::Haseeb.ViewModel.FranchiseDetailsJson.Input;
+using _GEN1_ = System.Diagnostics.DebuggerNonUserCodeAttribute;
 using _GEN2_ = System.CodeDom.Compiler.GeneratedCodeAttribute;
-using __Franchis1__ = global::Haseeb.ViewModel.FranchiseDetailsJson.JsonByExample;
-using __TLong__ = global::Starcounter.Templates.TLong;
-using __TString__ = global::Starcounter.Templates.TString;
 using __FrSchema__ = global::Haseeb.ViewModel.FranchiseDetailsJson.JsonByExample.Schema;
 using __Json1__ = global::Starcounter.Json.JsonByExample;
 using __TObject__ = global::Starcounter.Templates.TObject;
 using __Json__ = global::Starcounter.Json;
 using __Franchis__ = global::Haseeb.ViewModel.FranchiseDetailsJson;
-using _GEN1_ = System.Diagnostics.DebuggerNonUserCodeAttribute;
+using __TString__ = global::Starcounter.Templates.TString;
 
 #line hidden
 [_GEN1_][_GEN2_("Starcounter","2.0")]
@@ -74,26 +69,10 @@ public partial class FranchiseDetailsJson : __Json__ {
                 FranchiseName = Add<__TString__>("FranchiseName");
                 FranchiseName.DefaultValue = "";
                 FranchiseName.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__FranchiseName__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__FranchiseName__ = (System.String)_v_; }, false);
-                HouseSold = Add<__TLong__>("HouseSold", bind:"HouseSold");
-                HouseSold.DefaultValue = 0L;
-                HouseSold.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__HouseSold__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__HouseSold__ = (System.Int64)_v_; }, false);
-                AverageCommission = Add<__TLong__>("AverageCommission", bind:"AverageCommission");
-                AverageCommission.DefaultValue = 0L;
-                AverageCommission.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__AverageCommission__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__AverageCommission__ = (System.Int64)_v_; }, false);
-                TotalCommission = Add<__TLong__>("TotalCommission", bind:"TotalCommission");
-                TotalCommission.DefaultValue = 0L;
-                TotalCommission.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__TotalCommission__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__TotalCommission__ = (System.Int64)_v_; }, false);
-                SalesTrend = Add<__TLong__>("SalesTrend", bind:"SalesTrend");
-                SalesTrend.DefaultValue = 0L;
-                SalesTrend.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__SalesTrend__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__SalesTrend__ = (System.Int64)_v_; }, false);
             }
             public override object CreateInstance(s.Json parent) { return new __Franchis__(this) { Parent = parent }; }
             public __TString__ Html;
             public __TString__ FranchiseName;
-            public __TLong__ HouseSold;
-            public __TLong__ AverageCommission;
-            public __TLong__ TotalCommission;
-            public __TLong__ SalesTrend;
         }
         #line default
     }
@@ -126,18 +105,6 @@ public partial class FranchiseDetailsJson : __Json__ {
         #line hidden
             Template.FranchiseName.Setter(this, value); } }
         #line default
-    #line hidden
-    private System.Int64 __bf__HouseSold__;
-    #line default
-    #line hidden
-    private System.Int64 __bf__AverageCommission__;
-    #line default
-    #line hidden
-    private System.Int64 __bf__TotalCommission__;
-    #line default
-    #line hidden
-    private System.Int64 __bf__SalesTrend__;
-    #line default
     
     #line hidden
     [_GEN1_][_GEN2_("Starcounter","2.0")]
@@ -150,26 +117,6 @@ public partial class FranchiseDetailsJson : __Json__ {
         
         #line hidden
         public class FranchiseName : Input<__Franchis__, __TString__, string> {
-        }
-        #line default
-        
-        #line hidden
-        public class HouseSold : Input<__Franchis__, __TLong__, long> {
-        }
-        #line default
-        
-        #line hidden
-        public class AverageCommission : Input<__Franchis__, __TLong__, long> {
-        }
-        #line default
-        
-        #line hidden
-        public class TotalCommission : Input<__Franchis__, __TLong__, long> {
-        }
-        #line default
-        
-        #line hidden
-        public class SalesTrend : Input<__Franchis__, __TLong__, long> {
         }
         #line default
     }

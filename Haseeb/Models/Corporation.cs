@@ -12,8 +12,12 @@ namespace Haseeb.Models
     {
         public string CorpName { get; set; }
 
-        public QueryResultRows<Franchise> Franchises => Db.SQL<Franchise>(
-  "SELECT e FROM Corporation e WHERE e.Owner = ?", this);
+        public decimal FranchisesCount => Db.SQL<decimal>(
+  "SELECT COUNT(e.FranchiseName) FROM Franchise e WHERE e.Owner = ?", this).FirstOrDefault();
+        
+
+        public QueryResultRows<Franchise> AllFranchises => Db.SQL<Franchise>(
+  "SELECT e FROM Franchise e WHERE e.Owner = ?", this);
 
     }
 }

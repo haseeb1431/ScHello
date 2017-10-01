@@ -13,5 +13,16 @@ namespace Haseeb.Models
         public Corporation Owner { get; set; }
         public Address Location { get; set; }
         public string FranchiseName { get; set; }
+
+
+        #region Calculated Properties
+        public int HouseSold => 0;
+        public int AverageCommission => 0;
+        public int TotalCommission => 0;
+        public int SalesTrend => 0;
+
+        public string EditURL => $"/HaseebFranchise/franchise/{this.GetObjectID()}";
+
+        #endregion
     }
 }
