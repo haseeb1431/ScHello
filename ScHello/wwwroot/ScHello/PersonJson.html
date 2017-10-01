@@ -1,0 +1,64 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+
+
+
+<template>
+    <template is="dom-bind">
+        <h2>This is the view file using polymer</h2>
+
+        <p>
+            1. Import Polymer
+            2. Use template is="dom-bind"
+            to allow the use of bindings in a fragment
+            3. Bind the specific properties using the double 
+
+            <!--
+                
+            //TODO: how to use property editable and non-edtiable at the same time
+
+                bracket syntax like this: {{model.FirstName}}. model represents the JSON file, 
+            so {{model.FirstName}} is the FirstName value in PersonJson.json.-->
+        </p>
+
+        <h3>{{model.FullName}} </h3>
+        <h3>{{model.NameAfterMarriage}} </h3>
+        <fieldset>
+            <label>First name:</label>
+            <strong>{{model.FirstName}}</strong>
+        </fieldset>
+
+        <fieldset>
+            <label>Last name:</label>
+            <input value="{{model.LastName$::input}}">
+        </fieldset>
+
+        <fieldset>
+            <label>Last name Again:</label>
+            <input value="{{model.LastNameOld$::input}}">
+        </fieldset>
+
+        <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
+
+
+        <hr />
+        <!--custom HTML template element dom-repeat. It is similar to C# foreach loop.-->
+        <template is="dom-repeat" items="{{model.Expenses}}">
+            <div>
+                <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
+                <template is="imported-template" model="{{item}}" content$="{{item.Html}}">
+                </template>
+            </div>
+        </template>
+        <button value="{{model.NewExpenseTrigger$::click}}"
+                onmousedown="++this.value">Add new expense</button>
+        <button value="{{model.CancelTrigger$::click}}" onmousedown="++this.value">Cancel</button>
+        
+        <hr>
+
+        <h2>Current Balance: {{model.CurrentBalance}}</h2>
+        <hr />
+        <button value="{{model.DeleteAllTrigger$::click}}" onmousedown="++this.value">Delete all expenses</button>
+
+    </template>
+</template>

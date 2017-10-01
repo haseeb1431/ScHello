@@ -1,0 +1,27 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <h2>Welcome</h2>
+
+        <h4>Create Main Corporation</h4>
+
+        <label>Name:</label>
+        <input value="{{model.CorpName$::input}}">
+        <!--TODO: Bring Text from resource files-->
+        <button value="{{model.CreateCorpTrigger$::click}}" onmousedown="++this.value">Create corporation</button>
+
+        <br/><br /><br />
+
+
+        <template is="dom-repeat" items="{{model.AllCorporation}}">
+            <div>
+                <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
+                <template is="imported-template" model="{{item}}" content$="{{item.Html}}">
+                </template>
+            </div>
+        </template>
+
+
+    </template>
+</template>

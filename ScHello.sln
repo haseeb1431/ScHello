@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScHello", "ScHello\ScHello.csproj", "{6603DDDB-6B74-4050-9DB5-CAB14086BAE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haseeb", "Haseeb\Haseeb.csproj", "{FC967D79-844F-4827-A20B-335B1EE5DF06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6603DDDB-6B74-4050-9DB5-CAB14086BAE2}.Debug|x64.ActiveCfg = Debug|x64
+		{6603DDDB-6B74-4050-9DB5-CAB14086BAE2}.Debug|x64.Build.0 = Debug|x64
+		{6603DDDB-6B74-4050-9DB5-CAB14086BAE2}.Release|x64.ActiveCfg = Release|x64
+		{6603DDDB-6B74-4050-9DB5-CAB14086BAE2}.Release|x64.Build.0 = Release|x64
+		{FC967D79-844F-4827-A20B-335B1EE5DF06}.Debug|x64.ActiveCfg = Debug|x64
+		{FC967D79-844F-4827-A20B-335B1EE5DF06}.Debug|x64.Build.0 = Debug|x64
+		{FC967D79-844F-4827-A20B-335B1EE5DF06}.Release|x64.ActiveCfg = Release|x64
+		{FC967D79-844F-4827-A20B-335B1EE5DF06}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
