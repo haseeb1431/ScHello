@@ -16,9 +16,13 @@ namespace Haseeb.Models
 
 
         #region Calculated Properties
-        public int HouseSold => 0;
-        public int AverageCommission => 0;
-        public int TotalCommission => 0;
+        public decimal HouseSold => 
+        Db.SQL<decimal>("SELECT COUNT(e.Commission) FROM TransactionInfo e WHERE e.Benificary = ?", this).FirstOrDefault();
+        public decimal AverageCommission => 
+            HouseSold > 0 ? (TotalCommission / HouseSold) : 0;
+
+        public decimal TotalCommission =>
+            Db.SQL<decimal>("SELECT SUM(e.Commission) FROM TransactionInfo e WHERE e.Benificary = ?", this).First;
 
         /*
          *Sales Trend calcuation can be the difference from Average of last one week or three days

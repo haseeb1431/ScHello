@@ -6,7 +6,7 @@
     {
       "CorpName": "",
       "FranchisesCount": 0,
-      "AllFranchises": [
+      "AllFranchisesSorted": [
         {
           "FranchiseName": "",
           "HouseSold": 0,
@@ -15,11 +15,12 @@
           "SalesTrend": 0,
           "EditURL": ""
         }
-      ]
+      ],
+      "FranchiseName$": "",
+      "CreateFranchiseTrigger$": 0,
+      "SortOnTrigger$": 0
     }
   ],
-  "FranchiseName$": "",
-  "CreateFranchiseTrigger$": 0,
-  //How Can we use one trigger for all the sort
-  "SortOnTrigger$": 0
+
+
 }

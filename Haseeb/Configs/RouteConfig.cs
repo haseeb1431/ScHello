@@ -31,6 +31,7 @@ namespace Haseeb.Configs
             });
 
             Handle.GET("/HaseebFranchise/franchise/{?}", (string ID) => {
+
                 return Db.Scope(() => {
 
                     Session.Ensure();
@@ -40,6 +41,63 @@ namespace Haseeb.Configs
                     return new FranchiseDetailsJson { Data = franchise };
                     
                 });
+
+            });
+
+            Handle.GET("/HaseebFranchise/resetData", () => {
+
+                Db.Transact(() => {
+
+                    Session.Ensure();
+                    //Clear Existing Data
+                    Db.SQL<Corporation>("DELETE FROM Corporation");
+                    Db.SQL<Franchise>("DELETE FROM Franchise");
+                    Db.SQL<TransactionInfo>("DELETE FROM TransactionInfo");
+
+                    //add new Data
+                    var rand = new Random();
+                    var corp = new Corporation()
+                    {
+                        CorpName = "Adfenix"
+                    };
+
+                    var franchise = new Franchise()
+                    {
+                        FranchiseName = "Adfenix East",
+                        Owner = corp
+                    };
+                    for (int i = 0; i < rand.Next(5,10); i++)
+                    {
+                        new TransactionInfo()
+                        {
+                            TransactionDate = new DateTime(2017, 10, 01+(5%2)),
+                            Benificary = franchise,
+                            Commission = rand.Next(100, 100000),
+                            SalePrice = rand.Next(1000, 100000)
+                        };
+                    }
+
+                    //adding 2nd Franchise
+                    var franchise2 = new Franchise()
+                    {
+                        FranchiseName = "Adfenix West",
+                        Owner = corp
+                    };
+
+                    for (int i = 0; i < rand.Next(5, 10); i++)
+                    {
+                        new TransactionInfo()
+                        {
+                            TransactionDate = new DateTime(2017, 09, 25 + (5 % 2)),
+                            Benificary = franchise2,
+                            Commission = rand.Next(100, 100000),
+                            SalePrice = rand.Next(1000, 100000)
+                        };
+                    }
+                    
+                });
+
+                return 200;
             });
         }
     }

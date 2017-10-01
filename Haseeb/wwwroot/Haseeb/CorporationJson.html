@@ -27,10 +27,10 @@
                 <h4>Franchise Offices</h4>
 
                 <h5>Sort on</h5>
-                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=5">Number of homes</button> - 
-                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=6">Total Commission</button> - 
-                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=7">Average Comission</button> - 
-                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=8">Positive Trends</button>
+                <button value="{{item.SortOnTrigger$::click}}" onmousedown="this.value=5">Number of homes</button> - 
+                <button value="{{item.SortOnTrigger$::click}}" onmousedown="this.value=6">Total Commission</button> - 
+                <button value="{{item.SortOnTrigger$::click}}" onmousedown="this.value=7">Average Comission</button> - 
+                <button value="{{item.SortOnTrigger$::click}}" onmousedown="this.value=8">Positive Trends</button>
 
                 <!-- Franchise Details Table -->
                 <!--TODO: Figure out how we can move this out and keep it working as well-->
@@ -46,7 +46,7 @@
                         </tr>
                     </thead>
                     
-                    <template is="dom-repeat" items="{{item.AllFranchises}}">
+                    <template is="dom-repeat" items="{{item.AllFranchisesSorted}}">
                         <tr>
                             <td><a href="{{item.EditURL}}"> {{item.FranchiseName}}</a></td>
                             <td>{{item.HouseSold}}</td>
@@ -65,8 +65,8 @@
                 
                 <h5>Franchise Offices</h5>
                 <label>Franchise Name: </label>
-                <input value="{{model.FranchiseName$::input}}">
-                <button value="{{model.CreateFranchiseTrigger$::click}}" onmousedown="++this.value">Create corporation</button>
+                <input value="{{item.FranchiseName$::input}}">
+                <button value="{{item.CreateFranchiseTrigger$::click}}" onmousedown="++this.value">Create Franchise</button>
             </fieldset>
             <br/>
         </template>

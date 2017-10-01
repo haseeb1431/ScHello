@@ -2,6 +2,10 @@
 
 Franchise information management. Create **Corporations, Franchises** and add thier **Sales** as you **monitor trends**.
 
+##How to run it.
+* Load the dummy data into the system by visiting the [here][http://localhost:8080/HaseebFranchise/resetData]
+* Visit the Landing Page [here][http://localhost:8080/HaseebFranchise/start]
+
 ##Progress
 Currently you can add Corporations, their Franchises on the landing page.
 Details editing page for Franchises is in progress. 
