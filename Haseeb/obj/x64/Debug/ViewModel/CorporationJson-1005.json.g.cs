@@ -16,7 +16,6 @@ using Haseeb.Models;
 
 namespace Haseeb.ViewModel {
 using __CAAlEditURL__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.EditURL;
-using __CoAllCorpo1__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.JsonByExample;
 using __Arr__ = global::Starcounter.Arr<global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson>;
 using __CoAllCorpo2__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.Input;
 using __CAlCorpName__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.Input.CorpName;
@@ -30,13 +29,14 @@ using __CoCorpName__ = global::Haseeb.ViewModel.CorporationJson.Input.CorpName;
 using __CoCreateCo__ = global::Haseeb.ViewModel.CorporationJson.Input.CreateCorpTrigger;
 using __CoFranchis__ = global::Haseeb.ViewModel.CorporationJson.Input.FranchiseName;
 using __CoCreateFr__ = global::Haseeb.ViewModel.CorporationJson.Input.CreateFranchiseTrigger;
+using __CoSortOnTr__ = global::Haseeb.ViewModel.CorporationJson.Input.SortOnTrigger;
 using s = Starcounter;
 using st = Starcounter.Templates;
 using _ScTemplate_ = Starcounter.Templates.Template;
+using __CoAllCorpo1__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.JsonByExample;
 using __TArray__ = global::Starcounter.Templates.TArray<global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson>;
-using _GEN1_ = System.Diagnostics.DebuggerNonUserCodeAttribute;
 using _GEN2_ = System.CodeDom.Compiler.GeneratedCodeAttribute;
-using __CAAlTotalCom__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.TotalCommission;
+using __CAAlSalesTre__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.SalesTrend;
 using __Corporat__ = global::Haseeb.ViewModel.CorporationJson;
 using __Json__ = global::Starcounter.Json;
 using __TObject__ = global::Starcounter.Templates.TObject;
@@ -44,7 +44,7 @@ using __Json1__ = global::Starcounter.Json.JsonByExample;
 using __CoSchema__ = global::Haseeb.ViewModel.CorporationJson.JsonByExample.Schema;
 using __TString__ = global::Starcounter.Templates.TString;
 using __TLong__ = global::Starcounter.Templates.TLong;
-using __CAAlSalesTre__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.SalesTrend;
+using _GEN1_ = System.Diagnostics.DebuggerNonUserCodeAttribute;
 using __CoAllCorpo__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson;
 using __CAlAllFranc__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson;
 using __CAAlSchema__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.JsonByExample.Schema;
@@ -53,6 +53,7 @@ using __CAlAllFranc2__ = global::Haseeb.ViewModel.CorporationJson.AllCorporation
 using __CAAlFranchis__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.FranchiseName;
 using __CAAlHouseSol__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.HouseSold;
 using __CAAlAverageC__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.AverageCommission;
+using __CAAlTotalCom__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.AllFranchisesElementJson.Input.TotalCommission;
 using __CAlSchema__ = global::Haseeb.ViewModel.CorporationJson.AllCorporationElementJson.JsonByExample.Schema;
 
 #line hidden
@@ -122,6 +123,11 @@ public partial class CorporationJson : __Json__ {
                 CreateFranchiseTrigger.Editable = true;
                 CreateFranchiseTrigger.SetCustomAccessors((_p_) => { return ((__Corporat__)_p_).__bf__CreateFranchiseTrigger__; }, (_p_, _v_) => { ((__Corporat__)_p_).__bf__CreateFranchiseTrigger__ = (System.Int64)_v_; }, false);
                 CreateFranchiseTrigger.AddHandler((Json pup, Property<Int64> prop, Int64 value) => { return (new Input.CreateFranchiseTrigger() { App = (CorporationJson)pup, Template = (TLong)prop, Value = value }); }, (Json pup, Starcounter.Input<Int64> input) => { ((CorporationJson)pup).Handle((Input.CreateFranchiseTrigger)input); });
+                SortOnTrigger = Add<__TLong__>("SortOnTrigger$");
+                SortOnTrigger.DefaultValue = 0L;
+                SortOnTrigger.Editable = true;
+                SortOnTrigger.SetCustomAccessors((_p_) => { return ((__Corporat__)_p_).__bf__SortOnTrigger__; }, (_p_, _v_) => { ((__Corporat__)_p_).__bf__SortOnTrigger__ = (System.Int64)_v_; }, false);
+                SortOnTrigger.AddHandler((Json pup, Property<Int64> prop, Int64 value) => { return (new Input.SortOnTrigger() { App = (CorporationJson)pup, Template = (TLong)prop, Value = value }); }, (Json pup, Starcounter.Input<Int64> input) => { ((CorporationJson)pup).Handle((Input.SortOnTrigger)input); });
             }
             public override object CreateInstance(s.Json parent) { return new __Corporat__(this) { Parent = parent }; }
             public __TString__ Html;
@@ -130,6 +136,7 @@ public partial class CorporationJson : __Json__ {
             public __TArray1__ AllCorporation;
             public __TString__ FranchiseName;
             public __TLong__ CreateFranchiseTrigger;
+            public __TLong__ SortOnTrigger;
         }
         #line default
     }
@@ -206,6 +213,20 @@ public partial class CorporationJson : __Json__ {
         set {
         #line hidden
             Template.CreateFranchiseTrigger.Setter(this, value); } }
+        #line default
+    #line hidden
+    private System.Int64 __bf__SortOnTrigger__;
+    #line default
+    [_GEN1_][_GEN2_("Starcounter","2.0")]
+    public System.Int64 SortOnTrigger {
+    #line 24 "ViewModel\CorporationJson.json"
+        get {
+        #line hidden
+            return Template.SortOnTrigger.Getter(this); }
+        #line 24 "ViewModel\CorporationJson.json"
+        set {
+        #line hidden
+            Template.SortOnTrigger.Setter(this, value); } }
         #line default
     
     #line hidden
@@ -520,6 +541,11 @@ public partial class CorporationJson : __Json__ {
         
         #line hidden
         public class CreateFranchiseTrigger : Input<__Corporat__, __TLong__, long> {
+        }
+        #line default
+        
+        #line hidden
+        public class SortOnTrigger : Input<__Corporat__, __TLong__, long> {
         }
         #line default
     }

@@ -19,7 +19,17 @@ namespace Haseeb.Models
         public int HouseSold => 0;
         public int AverageCommission => 0;
         public int TotalCommission => 0;
+
+        /*
+         *Sales Trend calcuation can be the difference from Average of last one week or three days
+         * Take total commission for last three days or last one week or month as required
+         * if(lastthreeday commission is > averagecommission)
+         *     Calculate the percentage positive trends
+         * Else
+         *     caluate the -ve percentage trend  
+         */
         public int SalesTrend => 0;
+        
 
         public string EditURL => $"/HaseebFranchise/franchise/{this.GetObjectID()}";
 

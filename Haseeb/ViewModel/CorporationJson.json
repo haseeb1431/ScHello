@@ -19,5 +19,7 @@
     }
   ],
   "FranchiseName$": "",
-  "CreateFranchiseTrigger$": 0
+  "CreateFranchiseTrigger$": 0,
+  //How Can we use one trigger for all the sort
+  "SortOnTrigger$": 0
 }

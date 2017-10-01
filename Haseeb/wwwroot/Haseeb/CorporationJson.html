@@ -27,8 +27,10 @@
                 <h4>Franchise Offices</h4>
 
                 <h5>Sort on</h5>
-                <button>Homes </button>
-                <button>Commission </button>
+                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=5">Number of homes</button> - 
+                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=6">Total Commission</button> - 
+                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=7">Average Comission</button> - 
+                <button value="{{model.SortOnTrigger$::click}}" onmousedown="this.value=8">Positive Trends</button>
 
                 <!-- Franchise Details Table -->
                 <!--TODO: Figure out how we can move this out and keep it working as well-->

@@ -38,5 +38,34 @@ namespace Haseeb.ViewModel
 
             Transaction.Commit();
         }
+
+        void Handle(Input.SortOnTrigger action)
+        {
+            //TODO: Server Side sorting or Client Side
+            switch (action.Value)
+            {
+                case 5:
+                    RefereshFranchise(FranchiseKPIs.HomeSold);
+                    break;
+                case 6:
+                    RefereshFranchise(FranchiseKPIs.TotalCommission);
+                    break;
+                case 7:
+                    RefereshFranchise(FranchiseKPIs.AverageCommission);
+                    break;
+                case 8:
+                    RefereshFranchise(FranchiseKPIs.PositiveTrend);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void RefereshFranchise(FranchiseKPIs sortingKPI)
+        {
+            
+        }
+
+        private enum FranchiseKPIs { HomeSold=5,TotalCommission, AverageCommission, PositiveTrend}
     }
 }
