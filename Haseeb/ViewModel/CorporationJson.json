@@ -2,5 +2,12 @@
   "Html": "/Haseeb/CorporationJson.html",
   "CorpName$": "",
   "CreateCorpTrigger$": 0,
-  "AllCorporation": [ {} ]
+  "AllCorporation": [
+    {
+      "CorpName": "",
+      "Franchises": [ {} ]
+    }
+  ],
+  "FranchiseName$": "",
+  "CreateFranchiseTrigger$": 0
 }

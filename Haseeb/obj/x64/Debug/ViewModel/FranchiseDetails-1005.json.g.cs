@@ -66,7 +66,7 @@ public partial class FranchiseDetails : __Json__ {
                 InstanceType = typeof(__Franchis__);
                 Properties.ClearExposed();
                 Html = Add<__TString__>("Html");
-                Html.DefaultValue = "/Haseeb/FranchiseDetails.html";
+                Html.DefaultValue = "/Haseeb/FranchiseDetailsJson.html";
                 Html.SetCustomAccessors((_p_) => { return ((__Franchis__)_p_).__bf__Html__; }, (_p_, _v_) => { ((__Franchis__)_p_).__bf__Html__ = (System.String)_v_; }, false);
                 FranchiseName = Add<__TString__>("FranchiseName$");
                 FranchiseName.DefaultValue = "";

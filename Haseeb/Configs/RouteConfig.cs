@@ -24,7 +24,7 @@ namespace Haseeb.Configs
                 {
                     Session.Ensure();
 
-                    var corp = Db.SQL<Corporation>("SELECT c FROM Corporation c").FirstOrDefault();
+                    var corp = Db.SQL<Corporation>("SELECT c FROM Corporation c");//.FirstOrDefault();
                     return new CorporationJson { Data = corp };
                 });
 

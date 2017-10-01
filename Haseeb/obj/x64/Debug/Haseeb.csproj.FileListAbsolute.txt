@@ -1,0 +1,5 @@
+D:\Projects\Test\SC\ScHello\Haseeb\bin\Debug\Haseeb.exe
+D:\Projects\Test\SC\ScHello\Haseeb\bin\Debug\Haseeb.pdb
+D:\Projects\Test\SC\ScHello\Haseeb\obj\x64\Debug\Haseeb.csprojResolveAssemblyReference.cache
+D:\Projects\Test\SC\ScHello\Haseeb\obj\x64\Debug\Haseeb.exe
+D:\Projects\Test\SC\ScHello\Haseeb\obj\x64\Debug\Haseeb.pdb

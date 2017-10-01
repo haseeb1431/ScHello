@@ -5,23 +5,48 @@
         <h2>Welcome</h2>
 
         <h4>Create Main Corporation</h4>
+        <div>
+            <label>Name:</label>
+            <input value="{{model.CorpName$::input}}">
+            <!--TODO: Bring Text from resource files-->
+            <button value="{{model.CreateCorpTrigger$::click}}" onmousedown="++this.value">Create corporation</button>
+        </div>
+        <br />
+        <hr />
 
-        <label>Name:</label>
-        <input value="{{model.CorpName$::input}}">
-        <!--TODO: Bring Text from resource files-->
-        <button value="{{model.CreateCorpTrigger$::click}}" onmousedown="++this.value">Create corporation</button>
-
-        <br/><br /><br />
 
 
+        <h4>List of Corporations</h4>
         <template is="dom-repeat" items="{{model.AllCorporation}}">
-            <div>
-                <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
-                <template is="imported-template" model="{{item}}" content$="{{item.Html}}">
-                </template>
-            </div>
-        </template>
+            <!--Repeat this for each Corp only-->
 
+            <fieldset style="border:1px solid black">
+                <!--Styles should be in the separate CSS file-->
+
+                <h4>{{item.CorpName}}</h4>
+                <h5>Franchise Offices</h5>
+
+                <h6>Sort on</h6>
+                <button>Homes </button>
+                <button>Commission </button>
+
+                <!--custom HTML template element dom-repeat. It is similar to C# foreach loop.-->
+                <template is="dom-repeat" items="{{item.Franchises}}">
+                    <div>
+                        <!--imported-template is a custom element that helps with that by acting as an insertion point.-->
+                        <template is="imported-template" model="{{item}}" content$="{{item.Html}}">
+                        </template>
+                    </div>
+                </template>
+
+                
+                <h5>Franchise Offices</h5>
+                <label>Franchise Name: </label>
+                <input value="{{model.FranchiseName$::input}}">
+                <button value="{{model.CreateFranchiseTrigger$::click}}" onmousedown="++this.value">Create corporation</button>
+            </fieldset>
+            <br/>
+        </template>
 
     </template>
 </template>
